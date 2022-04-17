@@ -12,6 +12,7 @@ spec:
       labels:
         app: category-api-app
     spec:
+      revisionHistoryLimit: 0
       containers:
         - name: rahadian
           image: asia.gcr.io/sinau-kubernetes/category-api:develop
