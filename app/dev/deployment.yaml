@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
   name: category-api
 spec:
@@ -20,6 +20,10 @@ spec:
           env:
             - name: _ENV_DEPLOY
               value: develop
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
             
 
 ---
