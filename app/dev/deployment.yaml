@@ -15,7 +15,7 @@ spec:
       revisionHistoryLimit: 0
       containers:
         - name: rahadian
-          image: asia.gcr.io/sinau-kubernetes/category-api:develop
+          image: asia.gcr.io/sinau-kubernetes/category-api:33cf0d4
           ports:
             - containerPort: 3000
           env:
