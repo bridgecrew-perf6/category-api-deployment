@@ -3,7 +3,7 @@ kind: ReplicaSet
 metadata:
   name: category-api
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: category-api-app
