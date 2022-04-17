@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: rahadian
-          image: asia.gcr.io/sinau-kubernetes/category-api:develop
+          image: asia.gcr.io/sinau-kubernetes/category-api:db3ffdc
           ports:
             - containerPort: 3000
           env:
