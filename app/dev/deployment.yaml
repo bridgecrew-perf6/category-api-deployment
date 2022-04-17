@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: category-api
 spec:
+  revisionHistoryLimit: 0
   replicas: 3
   selector:
     matchLabels:
@@ -12,7 +13,6 @@ spec:
       labels:
         app: category-api-app
     spec:
-      revisionHistoryLimit: 0
       containers:
         - name: rahadian
           image: asia.gcr.io/sinau-kubernetes/category-api:33cf0d4
