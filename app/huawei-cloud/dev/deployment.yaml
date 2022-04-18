@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: rahadian
-          image: swr.ap-southeast-3.myhuaweicloud.com/sonar-test/category-api:33cf0d4
+          image: swr.ap-southeast-3.myhuaweicloud.com/sonar-test/category-api:be4eb99be1248704f6b09f0eb39541bd0ce3034d
           ports:
             - containerPort: 3000
           env:
