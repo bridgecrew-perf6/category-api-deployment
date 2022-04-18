@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: category-api
+spec:
+  revisionHistoryLimit: 3
+  replicas: 3
+  selector:
+    matchLabels:
+      app: category-api-app
+  template:
+    metadata:
+      labels:
+        app: category-api-app
+    spec:
+      containers:
+        - name: rahadian
+          image: swr.ap-southeast-3.myhuaweicloud.com/sonar-test/category-api:33cf0d4
+          ports:
+            - containerPort: 3000
+          env:
+            - name: _ENV_DEPLOY
+              value: develop
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "128m"
+            
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: load-balancer-category-api
+spec:
+  type: LoadBalancer
+  selector:
+    app: category-api-app
+  ports:
+  - port: 80
+    targetPort: 3000
