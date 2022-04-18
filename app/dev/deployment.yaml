@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: rahadian
-          image: asia.gcr.io/sinau-kubernetes/category-api:$GITHUB_SHA
+          image: asia.gcr.io/sinau-kubernetes/category-api:${GITHUB_SHA}
           ports:
             - containerPort: 3000
           env:
